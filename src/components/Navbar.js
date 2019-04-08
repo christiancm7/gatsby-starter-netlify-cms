@@ -35,7 +35,7 @@ const Navbar = class extends React.Component {
   render() {
     return (
       <nav
-        className="navbar"
+        className="navbar is-transparent"
         role="navigation"
         aria-label="main-navigation"
       >
@@ -45,19 +45,16 @@ const Navbar = class extends React.Component {
             id="navMenu"
             className={`navbar-menu ${this.state.navBarActiveClass}`}
           >
-            <div className="navbar has-text-centered">
+            <div className="navbar-start has-text-centered">
               <Link className="navbar-item" to="/about">
                 Home
               </Link>
               <Link className="navbar-item" to="/products">
-                Lifestyle!
-              </Link>
-              <Link className="navbar-item" to="/blog">
-                Twist It
+                Home
               </Link>
               <div className="navbar-brand">
             <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="Niko" style={{ width: "88px" }} />
+              <img src={logo} alt="Kaldi" style={{ width: "88px" }} />
             </Link>
             {/* Hamburger menu */}
             <div
@@ -70,18 +67,27 @@ const Navbar = class extends React.Component {
               <span />
             </div>
           </div>
-          <Link className="navbar-item" to="/contact">
-                Said It
+              <Link className="navbar-item" to="/blog">
+                Blog
               </Link>
               <Link className="navbar-item" to="/contact">
                 Contact
               </Link>
               <Link className="navbar-item" to="/contact/examples">
-                About
+                Form Examples
               </Link>
-              </div>
+            </div>
             <div className="navbar-end has-text-centered">
-           
+              <a
+                className="navbar-item"
+                href="https://github.com/AustinGreen/gatsby-netlify-cms-boilerplate"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="icon">
+                  <img src={github} alt="Github" />
+                </span>
+              </a>
             </div>
           </div>
         </div>
