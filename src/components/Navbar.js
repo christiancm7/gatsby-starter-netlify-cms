@@ -5,27 +5,24 @@ const Navbar = class extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      active: false,
-      navBarActiveClass: ""
+      
     };
   }
 
 
   render() {
     return (
-      <br />
-      <Navbar bg="light" variant="light">
-        <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-        <Nav className="mr-auto">
-          <Nav.Link href="#home">Home</Nav.Link>
-          <Nav.Link href="#features">Features</Nav.Link>
-          <Nav.Link href="#pricing">Pricing</Nav.Link>
-        </Nav>
-        <Form inline>
-          <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-          <Button variant="outline-primary">Search</Button>
-        </Form>
-      </Navbar>
+    <Nav>
+      <div class="logo">
+    <img src="img/logo.svg"/>
+</div>
+<ul>
+    <li><a href="/about.html" class="selected">Home</a></li>
+    <li><a href="/about.html">About</a></li>
+    <li><a href="/about.html">Work</a></li>
+    <li><a href="/about.html">Contact</a></li>
+</ul>
+      </Nav>
     );
   }
 };
